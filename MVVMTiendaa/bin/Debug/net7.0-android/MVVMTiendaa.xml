@@ -4,6 +4,49 @@
         <name>MVVMTiendaa</name>
     </assembly>
     <members>
+        <member name="T:MVVMTiendaa.ViewModels.DetallePrendaPageViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:MVVMTiendaa.ViewModels.DetallePrendaPageViewModel.Prenda">
+            <inheritdoc cref="F:MVVMTiendaa.ViewModels.DetallePrendaPageViewModel.prenda"/>
+        </member>
+        <member name="P:MVVMTiendaa.ViewModels.DetallePrendaPageViewModel.Nombre">
+            <inheritdoc cref="F:MVVMTiendaa.ViewModels.DetallePrendaPageViewModel.nombre"/>
+        </member>
+        <member name="P:MVVMTiendaa.ViewModels.DetallePrendaPageViewModel.Cantidad">
+            <inheritdoc cref="F:MVVMTiendaa.ViewModels.DetallePrendaPageViewModel.cantidad"/>
+        </member>
+        <member name="P:MVVMTiendaa.ViewModels.DetallePrendaPageViewModel.CantidadPicker">
+            <inheritdoc cref="F:MVVMTiendaa.ViewModels.DetallePrendaPageViewModel.cantidadPicker"/>
+        </member>
+        <member name="P:MVVMTiendaa.ViewModels.DetallePrendaPageViewModel.Descripcion">
+            <inheritdoc cref="F:MVVMTiendaa.ViewModels.DetallePrendaPageViewModel.descripcion"/>
+        </member>
+        <member name="P:MVVMTiendaa.ViewModels.DetallePrendaPageViewModel.Categoria">
+            <inheritdoc cref="F:MVVMTiendaa.ViewModels.DetallePrendaPageViewModel.categoria"/>
+        </member>
+        <member name="P:MVVMTiendaa.ViewModels.DetallePrendaPageViewModel.CategoriaDescripcion">
+            <inheritdoc cref="F:MVVMTiendaa.ViewModels.DetallePrendaPageViewModel.categoriaDescripcion"/>
+        </member>
+        <member name="P:MVVMTiendaa.ViewModels.DetallePrendaPageViewModel.Marca">
+            <inheritdoc cref="F:MVVMTiendaa.ViewModels.DetallePrendaPageViewModel.marca"/>
+        </member>
+        <member name="P:MVVMTiendaa.ViewModels.DetallePrendaPageViewModel.MarcaDescripcion">
+            <inheritdoc cref="F:MVVMTiendaa.ViewModels.DetallePrendaPageViewModel.marcaDescripcion"/>
+        </member>
+        <member name="P:MVVMTiendaa.ViewModels.DetallePrendaPageViewModel.Num">
+            <inheritdoc cref="F:MVVMTiendaa.ViewModels.DetallePrendaPageViewModel.num"/>
+        </member>
+        <member name="P:MVVMTiendaa.ViewModels.DetallePrendaPageViewModel.CantidadMaximaProductos">
+            <inheritdoc cref="F:MVVMTiendaa.ViewModels.DetallePrendaPageViewModel.cantidadMaximaProductos"/>
+        </member>
+        <member name="F:MVVMTiendaa.ViewModels.DetallePrendaPageViewModel.clickAnadirCommand">
+            <summary>The backing field for <see cref="P:MVVMTiendaa.ViewModels.DetallePrendaPageViewModel.ClickAnadirCommand"/>.</summary>
+        </member>
+        <member name="P:MVVMTiendaa.ViewModels.DetallePrendaPageViewModel.ClickAnadirCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:MVVMTiendaa.ViewModels.DetallePrendaPageViewModel.OnClickAnadir"/>.</summary>
+        </member>
         <member name="T:MVVMTiendaa.ViewModels.LoginPageViewModel">
             <inheritdoc/>
         </member>
@@ -12,6 +55,36 @@
         </member>
         <member name="P:MVVMTiendaa.ViewModels.LoginPageViewModel.Contrasenia">
             <inheritdoc cref="F:MVVMTiendaa.ViewModels.LoginPageViewModel.contrasenia"/>
+        </member>
+        <member name="T:MVVMTiendaa.ViewModels.PrendasPageViewModel">
+            <inheritdoc/>
+        </member>
+        <member name="P:MVVMTiendaa.ViewModels.PrendasPageViewModel.BuscarPorID">
+            <inheritdoc cref="F:MVVMTiendaa.ViewModels.PrendasPageViewModel.buscarPorID"/>
+        </member>
+        <member name="P:MVVMTiendaa.ViewModels.PrendasPageViewModel.ListaPrenda">
+            <inheritdoc cref="F:MVVMTiendaa.ViewModels.PrendasPageViewModel.listaPrenda"/>
+        </member>
+        <member name="T:MVVMTiendaa.ViewModels.RegistrarsePageViewModel">
+            <inheritdoc/>
+        </member>
+        <member name="P:MVVMTiendaa.ViewModels.RegistrarsePageViewModel.NombreUsuario">
+            <inheritdoc cref="F:MVVMTiendaa.ViewModels.RegistrarsePageViewModel.nombreUsuario"/>
+        </member>
+        <member name="P:MVVMTiendaa.ViewModels.RegistrarsePageViewModel.Correo">
+            <inheritdoc cref="F:MVVMTiendaa.ViewModels.RegistrarsePageViewModel.correo"/>
+        </member>
+        <member name="P:MVVMTiendaa.ViewModels.RegistrarsePageViewModel.Telefono">
+            <inheritdoc cref="F:MVVMTiendaa.ViewModels.RegistrarsePageViewModel.telefono"/>
+        </member>
+        <member name="P:MVVMTiendaa.ViewModels.RegistrarsePageViewModel.Direccion">
+            <inheritdoc cref="F:MVVMTiendaa.ViewModels.RegistrarsePageViewModel.direccion"/>
+        </member>
+        <member name="P:MVVMTiendaa.ViewModels.RegistrarsePageViewModel.Contrasenia">
+            <inheritdoc cref="F:MVVMTiendaa.ViewModels.RegistrarsePageViewModel.contrasenia"/>
+        </member>
+        <member name="P:MVVMTiendaa.ViewModels.RegistrarsePageViewModel.ConfirmarContrasenia">
+            <inheritdoc cref="F:MVVMTiendaa.ViewModels.RegistrarsePageViewModel.confirmarContrasenia"/>
         </member>
         <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Button.TextColorTo(Microsoft.Maui.Controls.Button,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing)">
             <summary>
@@ -118,11 +191,62 @@
             for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
             </summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Prenda">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Prenda" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Nombre">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Nombre" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Cantidad">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Cantidad" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.CantidadPicker">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "CantidadPicker" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Descripcion">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Descripcion" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Categoria">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Categoria" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.CategoriaDescripcion">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "CategoriaDescripcion" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Marca">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Marca" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.MarcaDescripcion">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "MarcaDescripcion" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Num">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Num" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.CantidadMaximaProductos">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "CantidadMaximaProductos" generated properties.</summary>
+        </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.NombreUsuario">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "NombreUsuario" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Contrasenia">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Contrasenia" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.BuscarPorID">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "BuscarPorID" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ListaPrenda">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ListaPrenda" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Correo">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Correo" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Telefono">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Telefono" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Direccion">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Direccion" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ConfirmarContrasenia">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ConfirmarContrasenia" generated properties.</summary>
         </member>
         <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
             <summary>
@@ -130,11 +254,62 @@
             for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
             </summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Prenda">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Prenda" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Nombre">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Nombre" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Cantidad">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Cantidad" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.CantidadPicker">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "CantidadPicker" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Descripcion">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Descripcion" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Categoria">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Categoria" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.CategoriaDescripcion">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "CategoriaDescripcion" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Marca">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Marca" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.MarcaDescripcion">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "MarcaDescripcion" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Num">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Num" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.CantidadMaximaProductos">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "CantidadMaximaProductos" generated properties.</summary>
+        </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.NombreUsuario">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "NombreUsuario" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Contrasenia">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Contrasenia" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.BuscarPorID">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "BuscarPorID" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ListaPrenda">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ListaPrenda" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Correo">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Correo" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Telefono">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Telefono" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Direccion">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Direccion" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ConfirmarContrasenia">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ConfirmarContrasenia" generated properties.</summary>
         </member>
     </members>
 </doc>

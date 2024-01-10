@@ -1,51 +1,44 @@
 using MVVMTiendaa.Models;
 using MVVMTiendaa.Services;
+using MVVMTiendaa.ViewModels;
 
 namespace MVVMTiendaa;
 
 public partial class RegistrarsePage : ContentPage
 {
-    Label errorLabel;
+   // Label errorLabel;
     private readonly APIService _ApiService;
-    
+    private readonly RegistrarsePageViewModel _viewModel;
+
     public RegistrarsePage(APIService apiservice)
     {
-        errorLabel = new Label();
-        _ApiService = apiservice;
+        //errorLabel = new Label();
+        
         InitializeComponent();
-	}
+        _ApiService = apiservice;
+        _viewModel = new RegistrarsePageViewModel();
+        _viewModel.SetAPIService(apiservice);
+        BindingContext = _viewModel;
+    }
 
     private async void OnClickRegistrarNuevoUsuario(object sender, EventArgs e)
     {
-        string contrasenia1 = contrasenia.Text;
-        string confirmarContrasenia1 = confirmarContrasenia.Text;
-
-
-        if (contrasenia1 == confirmarContrasenia1)
+        int resultado= await _viewModel.OnClickRegistrarNuevoUsuario();
+        if(resultado==-1)
         {
-            Usuario nuevoUsuario = new Usuario
-            {
-                usuario = nombreUsuario.Text,
-                contrasena = contrasenia.Text,
-                correo = correo.Text,
-                telefono = telefono.Text,
-                direccion= direccion.Text
-
-            };
-            // Las contraseñas coinciden
-            await _ApiService.PostUsuario(nuevoUsuario);
+            await DisplayAlert("Campos incompletos", "Completa todos los campos.", "OK");
+        }
+        else if(resultado==1)
+        {
             await DisplayAlert("Éxito", "El usuario ha sido creado exitosamente", "OK");
             await Navigation.PopAsync();
-
-            errorLabel.IsVisible = false; // Ocultar el mensaje de error
-
-
+           // errorLabel.IsVisible = false;
         }
         else
         {
-            // Las contraseñas no coinciden, Se muestra un mensaje de error o tomar otras medidas
-            errorLabel.IsVisible = true; // Mostrar el mensaje de error
+            await DisplayAlert("OH NO", "Las constraseñas no coinciden", "OK");
         }
+        
     }
 
     private async void OnClickCancelar(object sender, EventArgs e)
