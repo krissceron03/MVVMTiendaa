@@ -1,5 +1,6 @@
 using MVVMTiendaa.Models;
 using MVVMTiendaa.Services;
+using MVVMTiendaa.ViewModels;
 using System.Collections.ObjectModel;
 
 namespace MVVMTiendaa;
@@ -7,12 +8,16 @@ namespace MVVMTiendaa;
 public partial class PrendasPage : ContentPage
 {
     private readonly APIService _ApiService;
+    private readonly PrendasPageViewModel _viewModel;
 
     public PrendasPage(APIService apiservice)
     {
 
         InitializeComponent();
         _ApiService = apiservice;
+        _viewModel = new PrendasPageViewModel();
+        _viewModel.SetAPIService(apiservice);
+        BindingContext = _viewModel;
 
         int usuarioid = Preferences.Get("idUsuario", 0);
         if (usuarioid == 0)
@@ -22,37 +27,38 @@ public partial class PrendasPage : ContentPage
 
         }
     }
+    private void CargarPrendas()
+    {
+        _viewModel.CargarPrendasAsync();
+    }
+
+
     private async void OnClickBuscar(object sender, EventArgs e)
     {
-        if (string.IsNullOrWhiteSpace(BuscarPorID.Text) || !int.TryParse(BuscarPorID.Text, out int id))
+        Prenda resultado = await _viewModel.OnClickBuscar();
+    
+        if (resultado != null)
         {
-            // Entry está vacío, puedes mostrar un mensaje o simplemente salir del método
-            await DisplayAlert("UPS!", "Ingresa un código válido.", "OK");
-            return;
+            await Navigation.PushAsync(new DetallePrendaPage(_ApiService, resultado.idPrenda));
         }
-
-        Prenda p = await _ApiService.GetPrenda(Int32.Parse(BuscarPorID.Text));
-        await Navigation.PushAsync(new DetallePrendaPage(_ApiService)
+        else
         {
-            BindingContext = p,
-        });
+            await DisplayAlert("UPS!", "Ingresa un código válido.", "OK");
+        }
+       
     }
     protected override async void OnAppearing()
     {
         base.OnAppearing();
-        List<Prenda> listaPrenda = await _ApiService.GetAllPrendas();
-        var prendas = new ObservableCollection<Prenda>(listaPrenda);
-        productos.ItemsSource = prendas;
+        CargarPrendas();
     }
 
     private async void OnClickMostrarDetalles(object sender, SelectedItemChangedEventArgs e)
     {
 
         Prenda prenda = e.SelectedItem as Prenda;
-        await Navigation.PushAsync(new DetallePrendaPage(_ApiService)
-        {
-            BindingContext = prenda,
-        });
+        await Navigation.PushAsync(new DetallePrendaPage(_ApiService, prenda.idPrenda));
+        
     }
 
 

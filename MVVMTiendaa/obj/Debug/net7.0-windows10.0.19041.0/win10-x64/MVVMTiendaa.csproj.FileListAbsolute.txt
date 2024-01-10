@@ -340,3 +340,4 @@ C:\Users\Cristian Ceron\source\repos\MVVMTiendaa\MVVMTiendaa\obj\Debug\net7.0-wi
 C:\Users\Cristian Ceron\source\repos\MVVMTiendaa\MVVMTiendaa\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\user.scale-100.png
 C:\Users\Cristian Ceron\source\repos\MVVMTiendaa\MVVMTiendaa\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\usuario.scale-100.png
 C:\Users\Cristian Ceron\source\repos\MVVMTiendaa\MVVMTiendaa\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\woman.scale-100.png
+C:\Users\Cristian Ceron\source\repos\MVVMTiendaa\MVVMTiendaa\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\CommunityToolkit.Mvvm.dll

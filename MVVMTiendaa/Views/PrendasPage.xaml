@@ -54,7 +54,7 @@
 
         
         <ListView x:Name="productos"
-                       ItemsSource="{Binding listaPrenda}"  
+                       ItemsSource="{Binding ListaPrenda}"  
           RowHeight="130" 
           ItemSelected="OnClickMostrarDetalles">
 

@@ -11,7 +11,7 @@ public partial class DetallePrendaPage : ContentPage
     public List<string> num { get; set; }
     private int cantidadMaximaProductos;
 
-    public DetallePrendaPage(APIService apiservice)
+    public DetallePrendaPage(APIService apiservice, int idprenda)
     {
         InitializeComponent();
         _ApiService = apiservice;
