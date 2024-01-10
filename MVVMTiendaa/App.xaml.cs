@@ -1,12 +1,14 @@
-﻿namespace MVVMTiendaa
+﻿using MVVMTiendaa.Services;
+
+namespace MVVMTiendaa
 {
     public partial class App : Application
     {
         public App()
         {
             InitializeComponent();
-
-            MainPage = new AppShell();
+            APIService ApiService = new APIService();
+            MainPage = new NavigationPage(new ProductosPage(ApiService));
         }
     }
 }

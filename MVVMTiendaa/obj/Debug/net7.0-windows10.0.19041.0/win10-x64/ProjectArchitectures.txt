@@ -1,0 +1,1 @@
+C:\Users\Cristian Ceron\source\repos\MVVMTiendaa\MVVMTiendaa\MVVMTiendaa.csproj;x64
