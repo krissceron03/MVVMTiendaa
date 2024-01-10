@@ -8,14 +8,19 @@
             <TableRoot>
                 <TableSection Title="Editar credenciales">
                     <EntryCell x:Name="usuario"
+                               Text="{Binding Usuario}"
                            Placeholder="Usuario"/>
                     <EntryCell x:Name="correo"
+                               Text="{Binding Correo}"
                            Placeholder="Correo"/>
                     <EntryCell x:Name="telefono"
+                               Text="{Binding Telefono}"
                             Placeholder="Teléfono"/>
                     <EntryCell x:Name="direccion"
+                               Text="{Binding Direccion}"
                             Placeholder="Dirección"/>
                     <EntryCell x:Name="contrasena"
+                               Text="{Binding Contrasenia}"
                             Placeholder="Contrasena"/>
                    
                 </TableSection>

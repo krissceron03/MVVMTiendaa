@@ -30,10 +30,8 @@ public partial class UsuarioPage : ContentPage
     {
         var intusuario= Preferences.Get("idUsuario", 0);
         var usuario = await _ApiService.GetUsuarioPorCodigo(intusuario);
-        await Navigation.PushAsync(new DetallePerfilUsuario(_ApiService)
-        {
-            BindingContext = usuario,
-        });
+        await Navigation.PushAsync(new DetallePerfilUsuario(_ApiService));
+        
     }
 
     public async void OnClickCerrarSesion(object sender, EventArgs e)

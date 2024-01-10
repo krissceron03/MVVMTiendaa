@@ -1,5 +1,6 @@
 using MVVMTiendaa.Models;
 using MVVMTiendaa.Services;
+using MVVMTiendaa.ViewModels;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace MVVMTiendaa;
@@ -8,45 +9,41 @@ public partial class UsuarioModificado : ContentPage
 {
     private Usuario _usuario;
     private readonly APIService _ApiService;
+    private readonly UsuarioModificadoViewModel _viewModel;
 
-    public UsuarioModificado(APIService apiservice)
+    public UsuarioModificado(APIService apiservice, Usuario usuario)
     {
-
+        
         InitializeComponent();
+        _usuario= usuario;
         _ApiService = apiservice;
+        _viewModel = new UsuarioModificadoViewModel();
+        _viewModel.SetAPIService(apiservice);
+       
+        BindingContext = _viewModel;
     }
 
-    protected override void OnAppearing()
+    protected override async void OnAppearing()
     {
         base.OnAppearing();
-        _usuario = BindingContext as Usuario;
-        if (_usuario != null)
-        {
-            usuario.Text = _usuario.usuario;
-            correo.Text = _usuario.correo;
-            telefono.Text = _usuario.telefono;
-            direccion.Text = _usuario.direccion;
-            contrasena.Text = _usuario.contrasena;
-        }
+        int resultado = await _viewModel.CargarDatos();
+       
 
     }
 
     private async void OnClickGuardarCambios(object sender, EventArgs e)
     {
-        Usuario usuarionuevo = new Usuario
-        {
-            usuario = usuario.Text,
-            correo = correo.Text,
-            telefono= telefono.Text,
-            direccion= direccion.Text,
-            contrasena = contrasena.Text,
-        };
-        var respuesta = await _ApiService.UpdateUsuario(_usuario.idUsuario,usuarionuevo);
-        if(respuesta!=null)
+        int resultado = await _viewModel.OnClickGuardarCambios();
+        if(resultado == 1)
         {
             await DisplayAlert("Éxito", "Se han guardado los cambios correctamente", "OK");
             await Navigation.PopAsync();
         }
+        else
+        {
+            await DisplayAlert("OH NO!", "Llene los campos", "OK");
+        }
+        
 
         
 
